@@ -23,6 +23,7 @@ public class K6 extends JPanel {
             super.paintComponent(g);
             g.setColor(Color.BLACK);
             g.fillOval(225, 275, 50, 50);
+
     }
 
 }
