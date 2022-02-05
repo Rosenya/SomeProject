@@ -10,7 +10,7 @@ public class Rogue extends Humanoid implements Attack{
         Rogue rogue = new Rogue(0,0,2,2,0,0,2);
         K8 k8Roll = new K8();
         Rogue npc = new Rogue(0,0,2,2,0,0,2);
-        rogue.attack(npc);
+        //rogue.attack(npc);
 
     }
     private boolean canUseBow;
@@ -28,8 +28,8 @@ public class Rogue extends Humanoid implements Attack{
         this.dmg = dmg;
         int hp = npc.healthPoints;
         npc.healthPoints = hp - dmg;
-        System.out.println(dmg);
-        System.out.println(npc.healthPoints);
+        System.out.println("Dmg: " + dmg);
+        System.out.println("npc hp: " + npc.healthPoints);
         return npc.healthPoints;
     }
 
@@ -39,6 +39,7 @@ public class Rogue extends Humanoid implements Attack{
         int hp = 0;
         for (int i = 0; i < rolls; i++) {
            hp += dice.roll();
+           System.out.println(" hp roll: " + healthPoints);
         }
         return hp;
     }
@@ -47,6 +48,7 @@ public class Rogue extends Humanoid implements Attack{
         int dmg = 0;
         for (int i = 0; i < rolls; i++) {
             dmg += dice.roll();
+            System.out.println(" dmg roll: " + dmg);
         }
         return dmg;
     }
